@@ -1,11 +1,11 @@
 import Config from './config'
 import jQuery from 'jquery'
-import {emojiareaPlugin} from './jquery.emojiarea'
+import { emojiareaPlugin } from './jquery.emojiarea'
 const $ = jQuery
 
 emojiareaPlugin(jQuery, window, document)
 export class EmojiPicker {
-  constructor (options) {
+  constructor(options) {
     var ref, ref1
     if (options == null) {
       options = {}
@@ -18,11 +18,11 @@ export class EmojiPicker {
     }
     this.options = options
   }
-  clear () {
-    console.log('clear')  
+  clear() {
+    console.log('clear')
     debugger
   }
-  discover () {
+  discover() {
     var isiOS
     isiOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream
     if (isiOS) {
@@ -34,7 +34,7 @@ export class EmojiPicker {
     }, this.options))
   };
 
-  generateEmojiIconSets (options) {
+  generateEmojiIconSets(options) {
     var column, dataItem, i, icons, j, name, reverseIcons, row, totalColumns
     icons = {}
     reverseIcons = {}
@@ -65,7 +65,7 @@ export class EmojiPicker {
     return $.emojiarea.reverseIcons
   }
 
-  colonToUnicode (input) {
+  colonToUnicode(input) {
     if (!input) {
       return ''
     }
@@ -83,7 +83,7 @@ export class EmojiPicker {
     })
   }
 
-  unicodeToImage (input) {
+  unicodeToImage(input) {
     if (!input) {
       return ''
     }
@@ -103,7 +103,7 @@ export class EmojiPicker {
     })
   }
 
-  colonToImage (input) {
+  colonToImage(input) {
     if (!input) {
       return ''
     }
@@ -120,6 +120,4 @@ export class EmojiPicker {
       }
     })
   }
-  }
-
-// # sourceMappingURL=emoji-picker.js.map
+}

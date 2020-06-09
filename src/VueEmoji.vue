@@ -59,7 +59,7 @@ export default {
         assetsPath: '',
         popupButtonClasses: 'smile-icon',
         onChangecontent: (textAreaValue) => {
-          this.$emit('input', {data: textAreaValue})
+          this.$emit('input', textAreaValue)
         }
       })
       window.emojiPicker.discover()

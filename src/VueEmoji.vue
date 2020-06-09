@@ -46,7 +46,7 @@ export default {
     value: function (newVal) {
       Vue.nextTick(() => {
         // this.$el.querySelector('.emoji-wysiwyg-editor').innerHTML = newVal
-        this.$ref['emoji-vue-textarea'].value = newVal
+        this.$el.querySelector('.emoji-vue-textarea').innerHTML = newVal
       })
     }
   },
